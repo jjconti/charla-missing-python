@@ -1,0 +1,17 @@
+.reveal pre {
+	word-wrap: normal;
+	font-size: 1.4em;
+    padding: 0.2em;
+}
+
+pre.prettyprint {
+    background: #fefbf3;
+}
+
+pre.lang-python {
+    background: #cef6d8;
+}
+
+.reveal cite {
+    font-family: monospace;
+}
