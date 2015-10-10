@@ -9,8 +9,13 @@ jjconti@gmail.com
 
 @jjconti
 
+.. class:: hide-title
+
+.
+=
+
 **¿Qué extrañé (y qué no) de Python en los últimos cuatro lenguajes con los que trabajé?**
-==========================================================================================
+------------------------------------------------------------------------------------------
 
 .. image:: llorando.jpg
 
@@ -175,7 +180,7 @@ Listas por comprensión
 
 ::
 
-    [x**2 for x in range(10)]
+    [x*x for x in range(10)]
 
 PHP
 ===
@@ -196,7 +201,7 @@ Listas por comprensión
 
 ::
 
-    [x**2 for x in range(10) if x > 4]
+    [x*x for x in range(10) if x > 4]
 
 PHP (NO)
 ========
@@ -679,11 +684,28 @@ Clojure
 
 .. image:: raro.jpg
 
-Funional
-Todos los valores son inmutables
+Funcional.
+
+Todos los valores son inmutables.
+
+.. class:: hide-title
+
+.
+=
+
+Ejemplo
+-------
+
+.. class:: prettyprint lang-clj
+
+::
+
+    (+ 1 1)
+
+    (conj '(1 2 3) (+ 2 2))
 
 Macros
-======
+------
 
 .. class:: prettyprint lang-clj
 
@@ -701,7 +723,7 @@ Macros
     ; (+ 1 1)
 
 Ej en Ruby
-==========
+----------
 
 .. class:: prettyprint lang-ruby
 
@@ -720,7 +742,7 @@ Ej en Ruby
     end
 
 Ej en Clojure
-=============
+-------------
 
 .. class:: prettyprint lang-clj
 
@@ -736,7 +758,7 @@ Ej en Clojure
                        (remove-user 'ramon))
                    
 Solución
-========
+--------
 
 .. class:: prettyprint lang-clj
 
@@ -751,3 +773,25 @@ Solución
                  (+ count# ~delta) 
                  ~form))))
 
+
+Preguntas
+=========
+
+¿?
+
+Notas
+=====
+
+Más información
+---------------
+
+* link
+* link
+* libro
+
+La presentación
+---------------
+
+* http://www.juanjoconti.com/charlas/missing-python/
+* Fuentes: https://github.com/jjconti/charla-missing-python
+* Hecha con https://github.com/marianoguerra/rst2html5/
