@@ -5,9 +5,9 @@
 
 por `Juanjo Conti <http://www.juanjoconti.com>`_
 
-jjconti@gmail.com
+jjconti@gmail.com - @jjconti
 
-@jjconti
+PyDay Litoral 2015
 
 .. class:: hide-title
 
@@ -21,9 +21,9 @@ jjconti@gmail.com
 
 por `Juanjo Conti <http://www.juanjoconti.com>`_
 
-jjconti@gmail.com
+jjconti@gmail.com - @jjconti
 
-@jjconti
+PyDay Litoral 2015
 
 
 .. Pasaron varios años ya desde la última vez que utilicé Python profesionalmente.
@@ -40,9 +40,6 @@ Balada de la primera novia, Alejandro Dolina
 (El libro del fantasma)
 
     El poeta Jorge Allen tuvo su primera novia a la edad de doce años. Guarden las personas mayores sus sonrisas condescendientes. Porque en la vida de un hombre hay pocas cosas más serias que su amor inaugural.
-
-Primera novia
-=============
 
     Después de una triste fiestita de fin de curso, ya no volvió a verla ni a tener noticias de ella. Sin embargo siguió queriéndola a lo largo de sus años. Jorge Allen se hizo hombre y vivió formidables gestas amorosas. Pero jamas dejo de llorar por la morocha ausente.
 
@@ -85,8 +82,8 @@ PHP
 .. Si en PHP usás el keyword echo con una función, obtenés un mensaje de error.
    La solución es usar print_r.
    
-* La no necesidad de terminar las líneas con ;
-* Todos los objetos pueden ser representados como strings
+* Necesidad de terminar las líneas con ;
+* No todos los objetos pueden ser representados como strings
 * Antes de 5.4 no se podía desreferenciar llamadas a funciones
 
 .. class:: prettyprint lang-php
@@ -136,7 +133,7 @@ En Python:
 PHP
 ===
 
-Algo parecido con strings
+Algo parecido pasa con los strings
 
 .. class:: prettyprint lang-php
 
@@ -171,6 +168,14 @@ PHP
 
 Listas por comprensión
 
+.. class:: prettyprint lang-python
+
+::
+
+    [x*x for x in range(10)]
+
+.. class:: fragment
+
 .. class:: prettyprint lang-php
 
 ::
@@ -179,19 +184,18 @@ Listas por comprensión
         return $x*$x;
     }, range(0, 9))
 
-.. class:: fragment
+PHP
+===
 
+Listas por comprensión
 
 .. class:: prettyprint lang-python
 
 ::
 
-    [x*x for x in range(10)]
+    [x*x for x in range(10) if x > 4]
 
-PHP
-===
-
-Listas por comprensión
+.. class:: fragment
 
 .. class:: prettyprint lang-php
 
@@ -200,14 +204,6 @@ Listas por comprensión
     array_filter(
         array_map(...)
     )
-
-.. class:: fragment
-
-.. class:: prettyprint lang-python
-
-::
-
-    [x*x for x in range(10) if x > 4]
 
 PHP (NO)
 ========
@@ -238,7 +234,6 @@ Diferencias
 * Arrays, Hashes
 * Símbolos
 * Bloques
-* Algunos métodos
 * Cuestiones sintácticas
 
 Valores de verdad
@@ -535,6 +530,14 @@ Es un lenguaje compilado y de tipado estático, pero tiene inferencia de tipos.
 .
 =
 
+Screensaver Ninja
+-----------------
+
+.. image:: screensaverninja.png
+   :width: 800 px
+
+http://www.screensaver.ninja
+
 Swift
 -----
 
@@ -550,16 +553,17 @@ Swift
 * Los enteros tienen límite (en Python no)
 * Nombres de métodos más largos/dificiles de recordar
 
-  - `upper`/`uppercaseString`
-  - `startswith`/`hasPrefix`
+  - `upper` / `uppercaseString`
+  - `startswith` / `hasPrefix`
 
 * Usar listas o diccionarios con distintos tipos de datos puede llevar a complicaciones
 * Swift tiene bloques como Ruby
 
+
 Seguridad
 ---------
 
-* Intenta ser un lenguaje seguro, evitando excepciones de punteros nulos:
+* Intenta ser un lenguaje seguro, evitando excepciones de punteros nulos
 
 .. class:: prettyprint lang-swift
 
@@ -574,24 +578,25 @@ Seguridad
 Opcionales
 ----------
 
-En Swift, las referencias a objetos por lo general no puden valer `nil`, a menos
-que la variable en cuestión sea explícitamente declarada como valor opcional:
-
 .. class:: prettyprint lang-swift
 
 ::
 
     var str : String? = "Hola, PyDay"
 
-El signo de pregunta luego del tipo indica que la variable str es un opcional.
-Su valor puede o no existir.
+
+* Referencias a `nil`?
+* El signo de pregunta luego del tipo indica que la variable str es un opcional
+
+  * Su valor puede o no existir
 
 Opcionales
 ----------
 
-Cuando las variables se declaran como opcionales, deben ser usadas en un
-contexto donde se esperan opcionales o explícitamente "unwrapped"
-para revelar el valor subyasente.
+* Uso
+
+  * en un contexto que espere un opcional
+  * explícitamente "unwrapped"
 
 .. class:: prettyprint lang-swift
 
@@ -625,7 +630,7 @@ Opcionales
 Copia no opcional
 -----------------
 
-Copiar como no opcional en un *scope*.
+* Copiar como no opcional en un *scope*
 
 .. class:: prettyprint lang-swift
 
@@ -642,7 +647,7 @@ Copiar como no opcional en un *scope*.
 Copia no opcional mutable
 -------------------------
 
-Se puede usar `var` en lugar de `let` para hacer una copia mutable:
+* Se puede usar `var` en lugar de `let` para hacer una copia mutable
 
 .. class:: prettyprint lang-swift
 
@@ -653,13 +658,12 @@ Se puede usar `var` en lugar de `let` para hacer una copia mutable:
         print(producto.stock())
     }
 
-.. class:: hide-title
 
 Asignaciones
 ------------
 
-Una variable declarada como opcional, no se puede asignar a una
-no declarada como opcional:
+* Una variable declarada como opcional, no se puede asignar a una
+  no declarada como opcional
 
 .. class:: prettyprint lang-swift
 
@@ -669,7 +673,7 @@ no declarada como opcional:
     // produce un error en tiempo 
     // de compilación
 
-Al igual que si se trata de asignar `nil` a una variable no declarada como opcional.
+* Al igual que si se trata de asignar `nil` a una variable no declarada como opcional
 
 Optional chaining
 -----------------
@@ -684,7 +688,7 @@ Optional chaining
         // NO existe la propiedad
     }
 
-Más información en el capítulo Optionals de Swift pocket reference
+* Más información sobre opcionales en el capítulo Optionals de Swift pocket reference
 
 
 Clojure
@@ -711,6 +715,16 @@ Ejemplo
     (+ 1 1)
 
     (conj '(1 2 3) (+ 2 2))
+ 
+.. class:: fragment
+   
+.. class:: prettyprint lang-clj
+
+::
+
+    2
+
+    '(1 2 3 4)
 
 Macros
 ------
@@ -782,10 +796,13 @@ Solución
                  ~form))))
 
 
-Preguntas
-=========
+¡Muchas gracias!
+================
 
-¿?
+¿Preguntas?
+-----------
+
+.. image:: pensando.png
 
 Notas
 =====
