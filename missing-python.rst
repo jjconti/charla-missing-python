@@ -87,7 +87,13 @@ PHP
    
 * La no necesidad de terminar las líneas con ;
 * Todos los objetos pueden ser representados como strings
-* Antes de 5.4 no se podía desreferenciar llamadas a funciones.
+* Antes de 5.4 no se podía desreferenciar llamadas a funciones
+
+.. class:: prettyprint lang-php
+
+::
+
+    $a[1]()
 
 PHP
 ===
@@ -130,7 +136,7 @@ En Python:
 PHP
 ===
 
-Algo parecido con strings (Ej: Remover de un string el final variable)
+Algo parecido con strings
 
 .. class:: prettyprint lang-php
 
@@ -238,7 +244,7 @@ Diferencias
 Valores de verdad
 -----------------
 
-Todo tiene valor de verdad true excepto false y nil
+Todo tiene valor de verdad `true` excepto `false` y `nil`
 
 .. class:: prettyprint lang-ruby
 
@@ -414,14 +420,35 @@ Símbolos
     :hola.object_id # 1171208
     :hola.object_id # 1171208
 
-Bloques
--------
+Sintaxis
+--------
+
+<expresion> if <condición>
 
 .. class:: prettyprint lang-ruby
 
 ::
 
-    [1, 2, 3].map {|x| x * 2}
+    a = 1 if true
+
+.. class:: fragment
+
+.. class:: prettyprint lang-ruby
+
+::
+
+    api_key = "zzzzzzz" if env.production?
+
+.. class:: fragment
+
+.. class:: prettyprint lang-ruby
+
+::
+
+    if true
+      puts "no no no no"
+    end if false
+
 
 Sintaxis
 --------
@@ -496,27 +523,6 @@ Captura genérica de parámetros no necesariamente al final.
 
     [1, [2, 3, 4], 5]
     
-Sintaxis
---------
-
-<expresion> if <condición>
-
-.. class:: prettyprint lang-ruby
-
-::
-
-    a = 1 if true
-
-.. class:: fragment
-
-.. class:: prettyprint lang-ruby
-
-::
-
-    if true
-      puts "no no no no"
-    end if false 
-
 Swift
 =====
 
@@ -540,14 +546,14 @@ Swift
 
     var s : String = "Hola"
     
-* Permite definir constantes: let
+* Permite definir constantes: `let`
 * Los enteros tienen límite (en Python no)
 * Nombres de métodos más largos/dificiles de recordar
 
-  - upper/uppercaseString
-  - startswith/hasPrefix
+  - `upper`/`uppercaseString`
+  - `startswith`/`hasPrefix`
 
-* Usar listas o diccionarios con distintos tipos de datos puede llevar a complicaciones.
+* Usar listas o diccionarios con distintos tipos de datos puede llevar a complicaciones
 * Swift tiene bloques como Ruby
 
 Seguridad
@@ -583,7 +589,7 @@ Su valor puede o no existir.
 Opcionales
 ----------
 
-Cuando las variables se declaran como opcionales, debeer ser usadas en un
+Cuando las variables se declaran como opcionales, deben ser usadas en un
 contexto donde se esperan opcionales o explícitamente "unwrapped"
 para revelar el valor subyasente.
 
@@ -594,7 +600,7 @@ para revelar el valor subyasente.
     print(str) // Optional("Hola, PyDay")
     print(str!) // "Hola, PyDay"
 
-    str + ", Bienvenido" 
+    str + ", Bienvenido"
     // Value of optional type 'String?'
     // not unwrapped
 
@@ -605,9 +611,11 @@ Opcionales
 
 ::
 
+    str! + ", Bienvenido"
+
     str = nil
 
-    str! + ", Bienvenido" 
+    str! + ", Bienvenido"
     // Error en tiempo de ejecución
 
     if str {
@@ -650,7 +658,7 @@ Se puede usar `var` en lugar de `let` para hacer una copia mutable:
 Asignaciones
 ------------
 
-Una variable declarada como optional, no se puede asignar a una
+Una variable declarada como opcional, no se puede asignar a una
 no declarada como opcional:
 
 .. class:: prettyprint lang-swift
@@ -785,9 +793,10 @@ Notas
 Más información
 ---------------
 
-* link
-* link
-* libro
+* PHP: http://phpepl.herokuapp.com/
+* Ruby: http://nbviewer.ipython.org/github/jjconti/aprendiendo-ruby/blob/master/RubyDesdePython.ipynb
+* Swift: Swift pocket reference y Swift development with Cocoa (O'Reilly)
+* Clojure: https://carouselapps.com/tag/clojure/
 
 La presentación
 ---------------
